@@ -1,17 +1,11 @@
+#Write a python script that ask for two numbers, add them together and output the response into a file called 'maths.txt'. 
 
-#Given the following python code:
-#values = [66, 43, 1, 6, 2, 99, 4]
-#Output each number on a separate line if it is less than the number 10.
 
-values = [66, 43, 1, 6, 2, 99, 4]
-num_list =[numbers for numbers in values if numbers < 10]
-print(*num_list, sep="\n")
+num1 = int(input("Enter 1st number: "))
+num2 = int(input("Enter 2nd number: "))
+total = num1 + num2
 
-#alter:
+with open("maths.txt", "w") as math_file:
+    math_file.write(str(total))
+    
 
-values = [66, 43, 1, 6, 2, 99, 4]
-new_list = []
-for item in values:
-    if item < 10:
-         new_list.append(item)
-print(*new_list, sep = "\n")

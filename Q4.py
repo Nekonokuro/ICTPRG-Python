@@ -1,13 +1,20 @@
-#Write a program that enters a string containing a person's full name and then output their initials. Example:
-#Full Name: Lachlan van der Velden
-#Initials: LVDV
-#Full Name: Dave Verg Douglas
-#Initials: DVD
+#Write a python script that outputs the factorial of all numbers from 1 - 10. eg:
+#1 -> 1
+#2 = 1x2 -> 2
+#3 = 1x2x3 -> 6
+#4 = 1x2x3x4 -> 24
+with open("factorial.txt", "w") as fact_file:
+    for number in range(1, 11):
+        output = str(number) + "  "
+        factorial = 1
+        for i in range(1, number + 1):
+    
+            factorial = factorial * i
+            output = str(number) + " = 1" + "X" + str(i)
+            output = output + " -> " + str(factorial)
+        print(output)
+        fact_file.write(str(output) + "\n")
+        
 
-name = input("Enter your name: ")
-name_list = name.split()
 
-print("Full name: " + name + "\n" + "Initials: " + "".join(initial[0] for initial in name_list))
-
-
-
+    

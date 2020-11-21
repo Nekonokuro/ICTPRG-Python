@@ -1,13 +1,10 @@
-#Given the following python code
-#values = [89, 456, 4, 55, 232, 2, 54, 78, 65, 45, 12, 459, 35616, 45 ,78]
-#Sum all of the numbers and output the result
-#Average all of the numbers and output the result
-#Output the maximum number in the list
+#Write a python script that reads a file called 'names.txt' 
+#(which has names separated by a new line), then converts each name to the correct casing 
+#and outputs them to a file called 'names-formated.txt' Eg:
 
-values = [89, 456, 4, 55, 232, 2, 54, 78, 65, 45, 12, 459, 35616, 45 ,78]
+with open("names.txt", "r") as names_file:
 
-values_sum = sum(values)
-average = values_sum/len(values)
-max_num = max(values)
-
-print("Sum of numbers: " + str(values_sum) + "\n" + "Average of numbers: " + str(average) + "\n" + "Maximum number in a list: " + str(max_num))
+    for name in names_file:
+        f_names = name.title()
+        with open("names_formatted.txt", "a") as f_file:
+            form_file = f_file.write(f_names)

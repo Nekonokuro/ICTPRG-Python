@@ -1,0 +1,5 @@
+anna:password
+john:smartpassword
+boris:superhacker
+hackerman:boo
+admin:qwerty

@@ -1,10 +1,10 @@
-#Design a program which will ask the user to enter the date in the form dd/mm/yyyy. Example 23/08/2019
-#The date will be printed like below:
-#Date: 23
-#Month : 08
-#Year: 2019
+#Write a python script that keeps asking for names, until they enter an empty name,
+#then creates a file called 'people.txt' and adds names on a separate line. 
 
-date = input("Enter the date in format dd/mm/yyyy: \n")
-date_list = date.split("/")
-print("Date: " + date_list[0] + "\n" + "Month: " + date_list[1] + "\n" + "Year: " + date_list[2])
-
+name = 0
+with open("people.txt", "w") as filename:
+    while name != "":
+        name = input("Enter any name: \n")
+        filename.writelines(str(name) + "\n")
+        
+    
